@@ -9,6 +9,11 @@ export const NetflixCards = () => {
     return genre;
   };
   const rating = 8.9;
+  const age = 18;
+  const canWatch = () => {
+    if (age >= 18) return "Watch Now";
+    return "Not Available";
+  };
   return (
     <>
       <div>
@@ -18,6 +23,14 @@ export const NetflixCards = () => {
       <h4> Rating : {rating + 9}</h4>
       <p>Description : {description}</p>
       <p>Genre : {returnGenre()}</p>
+      {/* <p>
+        {age >= 18 ? (
+          <button>Watch Now</button>
+        ) : (
+          <button disabled>Watch </button>
+        )}
+      </p> */}
+      <button>{canWatch()}</button>
     </>
   );
 };
