@@ -1,9 +1,12 @@
 import "./App.css";
+import { NetflixCards } from "./NetflixCards";
 
 function App() {
   return (
     <>
-      <h1>Hello this is Nahid Parvez Mafi</h1>
+      <NetflixCards />
+      <NetflixCards />
+      <NetflixCards />
     </>
   );
 }
