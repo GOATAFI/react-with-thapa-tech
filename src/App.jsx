@@ -1,6 +1,6 @@
 import "./App.css";
-import { NetflixCards } from "./NetflixCards";
-import { Practices } from "./Practices";
+import { NetflixCards } from "./Components/NetflixCards";
+import { Practices } from "./Components/Practices";
 
 function App() {
   return (
