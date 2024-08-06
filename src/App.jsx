@@ -1,14 +1,13 @@
 import "./App.css";
-import { NetflixCards } from "./Components/NetflixCards";
-import { Practices } from "./Components/Practices";
-import { Profile } from "./Components/Profile";
+import { EventHandling } from "./Components/EventHandling";
 
 function App() {
   return (
     <>
-      <NetflixCards />
-      <Practices />
-      <Profile />
+      {/* <NetflixCards /> */}
+      {/* <Practices />
+      <Profile /> */}
+      <EventHandling />
     </>
   );
 }
