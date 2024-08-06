@@ -6,7 +6,7 @@ export const SeriesCard = ({ curElem }) => {
       <div>
         <img src={img_url} alt="" width="400px" height="400px" />
       </div>
-      <h2>Name : {name}</h2>
+      <h2 className="text-5xl">Name : {name}</h2>
       <h4> Rating : {rating}</h4>
       <p>Description : {description}</p>
       <p>Genre : {genre}</p>

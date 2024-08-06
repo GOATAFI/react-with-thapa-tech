@@ -8,5 +8,3 @@ export const ProfileCard = ({ name, age, greetings, children }) => {
     </>
   );
 };
-
-// Aaj amra shadin
