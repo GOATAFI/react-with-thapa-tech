@@ -1,5 +1,6 @@
 import "./App.css";
 import { EventHandling } from "./Components/EventHandling";
+import { EventProps } from "./Components/EventProps";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       {/* <Practices />
       <Profile /> */}
       <EventHandling />
+      <EventProps />
     </>
   );
 }
