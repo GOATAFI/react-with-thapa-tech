@@ -9,10 +9,23 @@ export const State = () => {
   const handleButtonClick = () => {
     setCount(() => count + 1);
   };
+  console.log("Parent Compo");
   return (
     <>
-      <h1>{count}</h1>
-      <button onClick={handleButtonClick}>Increment</button>
+      <div>
+        <h1 className="text-5xl">{count}</h1>
+        <button onClick={handleButtonClick}>Increment</button>
+      </div>
+      <ChildComponent />
     </>
   );
 };
+
+export function ChildComponent() {
+  console.log("Child Compo");
+  return (
+    <>
+      <h1>Child Compo</h1>
+    </>
+  );
+}
