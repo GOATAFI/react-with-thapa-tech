@@ -2,6 +2,7 @@ import "./App.css";
 import { EventHandling } from "./Components/EventHandling";
 import { EventPropagation } from "./Components/EventPropagation";
 import { EventProps } from "./Components/EventProps";
+import { State } from "./Components/hooks/State";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <EventHandling />
       <EventProps />
       <EventPropagation />
+      <State />
     </>
   );
 }
