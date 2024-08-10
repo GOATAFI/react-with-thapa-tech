@@ -5,6 +5,7 @@ import { EventPropagation } from "./Components/EventPropagation";
 import { EventProps } from "./Components/EventProps";
 import { LiftStateUp } from "./Components/hooks/LiftStateUp";
 import { State } from "./Components/hooks/State";
+import { ToggleSwitch } from "./Components/ToggleSwitch";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <State />
       <DerivedState />
       <LiftStateUp />
+      <ToggleSwitch />
     </>
   );
 }
