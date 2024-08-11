@@ -8,14 +8,14 @@ export const EventPropagation = () => {
     console.log("Parent Clicked");
   };
   const handleChild = (event) => {
-    event.stopPropagation();
+    // event.stopPropagation();
     console.log("Child Clicked");
   };
   return (
     <div>
-      <div className="grandpa border-red-100" onClickCapture={handleGrandpa}>
-        <div className="parent border-blue-100" onClickCapture={handleParent}>
-          <div className="child border-black" onClickCapture={handleChild}>
+      <div className="grandpa border-red-100" onClick={handleGrandpa}>
+        <div className="parent border-blue-100" onClick={handleParent}>
+          <div className="child border-black" onClick={handleChild}>
             Child Div
           </div>
         </div>

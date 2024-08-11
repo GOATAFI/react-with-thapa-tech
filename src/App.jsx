@@ -1,11 +1,5 @@
 import "./App.css";
-import { DerivedState } from "./Components/DerivedState";
-import { EventHandling } from "./Components/EventHandling";
-import { EventPropagation } from "./Components/EventPropagation";
-import { EventProps } from "./Components/EventProps";
-import { LiftStateUp } from "./Components/hooks/LiftStateUp";
-import { State } from "./Components/hooks/State";
-import { ToggleSwitch } from "./Components/ToggleSwitch";
+import { Todo } from "./Projects/Todo/Todo";
 
 function App() {
   return (
@@ -13,13 +7,14 @@ function App() {
       {/* <NetflixCards /> */}
       {/* <Practices />
       <Profile /> */}
-      <EventHandling />
+      {/* <EventHandling />
       <EventProps />
       <EventPropagation />
       <State />
       <DerivedState />
       <LiftStateUp />
-      <ToggleSwitch />
+      <ToggleSwitch /> */}
+      <Todo />
     </>
   );
 }
