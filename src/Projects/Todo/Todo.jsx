@@ -1,12 +1,22 @@
 import { useState } from "react";
+import { MdDeleteForever } from "react-icons/md";
 
 export const Todo = () => {
   const [inputValue, setInputValue] = useState("");
+  const [task, setTask] = useState([]);
   const handleInputChange = (value) => {
     setInputValue(value);
   };
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    // console.log(e);
+    if (!inputValue) return;
+    if (task.includes(inputValue)) {
+      setInputValue("");
+      return;
+    }
+    setTask((prevTask) => [...prevTask, inputValue]);
+    setInputValue("");
   };
   return (
     <>
@@ -27,6 +37,18 @@ export const Todo = () => {
             <button type="submit">Add Task</button>
           </div>
         </form>
+        <ul>
+          {task.map((curTask, i) => {
+            return (
+              <li key={i}>
+                <span>{curTask}</span>
+                <button>
+                  <MdDeleteForever className="w-10 h-6" />
+                </button>
+              </li>
+            );
+          })}
+        </ul>
       </section>
     </>
   );
