@@ -34,6 +34,16 @@ export const Todo = () => {
     return () => clearInterval(interval);
   }, []);
 
+  //todo delete functionalities
+  const handleDeleteTodo = (value) => {
+    console.log(task);
+    console.log(value);
+    const updatedTask = task.filter((curTask) => curTask !== value);
+    setTask(updatedTask);
+  };
+  const handleClearAll = () => {
+    setTask([]);
+  };
   return (
     <>
       <h1>TODO LIST</h1>
@@ -59,13 +69,14 @@ export const Todo = () => {
             return (
               <li key={i}>
                 <span>{curTask}</span>
-                <button>
+                <button onClick={() => handleDeleteTodo(curTask)}>
                   <MdDeleteForever className="w-10 h-6" />
                 </button>
               </li>
             );
           })}
         </ul>
+        <button onClick={handleClearAll}>Clear All</button>
       </section>
     </>
   );
