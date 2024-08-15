@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
+import { TodoForm } from "./TodoForm";
 export const Todo = () => {
-  const [inputValue, setInputValue] = useState("");
   const [task, setTask] = useState([]);
   const [dateTime, setDateTime] = useState("");
-  const handleInputChange = (value) => {
-    setInputValue(value);
-  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // console.log(e);
@@ -49,21 +47,7 @@ export const Todo = () => {
       <h1>TODO LIST</h1>
       <h2>{dateTime}</h2>
       <section>
-        <form className="flex" onSubmit={handleFormSubmit}>
-          <div>
-            <input
-              className="border-2 border-black "
-              type="text"
-              name=""
-              id=""
-              value={inputValue}
-              onChange={(e) => handleInputChange(e.target.value)}
-            />
-          </div>
-          <div>
-            <button type="submit">Add Task</button>
-          </div>
-        </form>
+        <TodoForm />
         <ul>
           {task.map((curTask, i) => {
             return (
