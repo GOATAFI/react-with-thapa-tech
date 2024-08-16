@@ -5,8 +5,8 @@ export const Todo = () => {
   const [task, setTask] = useState([]);
   const [dateTime, setDateTime] = useState("");
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
+  const handleFormSubmit = () => {
+    // e.preventDefault();
     // console.log(e);
     if (!inputValue) return;
     if (task.includes(inputValue)) {
@@ -47,7 +47,7 @@ export const Todo = () => {
       <h1>TODO LIST</h1>
       <h2>{dateTime}</h2>
       <section>
-        <TodoForm />
+        <TodoForm onAddTodo={handleFormSubmit} />
         <ul>
           {task.map((curTask, i) => {
             return (
